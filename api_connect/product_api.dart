@@ -27,6 +27,38 @@ class ProductApi {
     return result;
   }
 
+Future<List<Product>> searchProducts(
+      String text) async {
+
+    final url =
+        '$baseUrl/products/search?q=$text';
+
+    final response =
+        await http.get(Uri.parse(url));
+
+    if (response.statusCode != 200) {
+      throw Exception(
+        'Failed to search products',
+      );
+    }
+
+    final data =
+        jsonDecode(response.body);
+
+    final products =
+        data['products'];
+
+    final result = <Product>[];
+
+    for (final item in products) {
+      result.add(
+        Product.fromJson(item),
+      );
+    }
+
+    return result;
+  }
+
   Future<Product> callproduct(int id) async {
 
     final url = '$baseUrl/products/$id';
