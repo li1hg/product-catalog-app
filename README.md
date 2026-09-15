@@ -1,21 +1,5 @@
 # product-catalog-app
 
-Project Structure
-lib/
-├── api_connect/
-│   └── product_api.dart
-│
-├── data_convert/
-│   └── json_convert.dart
-│
-├── user_interface/
-│   ├── home_screen.dart
-│   ├── card.dart
-│   ├── detail_interface.dart
-│   └── ProductManager.dart
-│
-└── main.dart
-
 Code Explanation
 
 [main.dart]
