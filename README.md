@@ -1,4 +1,5 @@
-## Code Explanation
+## product catalog app
+This application is built using Flutter and uses the DummyJSON API to retrieve product information. Users can browse products, search for specific products, scroll to load more products, refresh the product list, and tap on a product to view its details.
 
 ### `main.dart`
 
